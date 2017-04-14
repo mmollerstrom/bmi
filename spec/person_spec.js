@@ -16,7 +16,7 @@ describe("Person", function() {
   it("Should calculate BMI value", function() {
     person.calculate_bmi();
     expect(person.bmiValue).toEqual(26.01);
-  });
+  });  
   //
   // it("should have BMI Message", function() {
   //   person.calculate_bmi();
