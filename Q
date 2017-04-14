@@ -1,0 +1,66 @@
+Questions:
+1) ((Explain what this is in the context of an instance of a Person object.))
+  this is person variable. we use this to refer to person attr, which (I think) will
+  in a later instance of the project; put in their values of weight and height.
+  right now we have given in fixed values, height: 179, weight: 76
+    so basically, we could have printed out "person", instead of "this", but "this"
+    in this case refers to person, since it owns all underlying attributes.
+    similar to it in ruby.
+2) ((Make sure you run through the whole code manually using the browsers console.
+      What happens if you reload the page?))
+I get 4 failures.
+2) Person should calculate bmi value
+  1a) [refference error], Person is not defined.
+  1b) [type error], calculate_bmi is not defined.
+2)Person should have BMI Message
+  a)refference error, person is not defined.
+  b)TypeError: Cannot read property 'calculate_bmi' of undefined
+
+
+Question:
+1) Why do we need to condition the finalBMI? (Why do we need an if statement?)
+
+Answer:
+1) Because, we need to specify that if weight or height is more than 0,
+finalBMI should be the result of calculation with weight / (height / 100 * height / 100)
+by the name finalBMI I can figure out that that it will eventually be the output of
+the bmiValue.
+
+
+Question:
+1) Why does the setBMIMessage(obj); call do?
+2) Why do we have a separate function called setBMIMessage?
+
+Answer:
+
+  1)
+  It calls for the argument obj below which is either true or false, depending the value calculated out
+  from BMICalculator.
+
+  2)
+  otherwise the obj would be used from above instead of below.
+  above is (height and weight obj's)
+  below is the if statements of the calculated that spans from 18.5 to 30.
+  depending on the result, it will give you a message i.e: "obese" "normal" "overweight" et.c
+
+Questions:
+
+1) What is the $(document).ready... function?
+2) Why are we using parseFloat($('#weight').val());?
+3) What would happen if we did not include <script src="src/person.js"></script> in theindex.html source?
+4) What line in index.html calls the method that calculates the BMI? What is happening on this line, in terms of the rest of the program?
+
+  answers:
+    1) It's loading the page before all functions, I guess its because the end-user shouldn't have to wait
+      for functions to load.
+
+    2) It's because in the form input, we allow text to be put in, and since text is not a definition of of calculation,
+        we are not able to use it. That's why we use the parseFloat; to make sure that the inputed value is a number.
+        That's what parseFloat does, it checks so the value input is a number.
+
+    3) Nothing happens at all. In Person.js we bind person.function.calculate_bmi, which directs to calculate_bmi.js file
+        containing the "blueprint" for how that "class" is to behave.
+
+    4) I think line 16 calls for it, <<person.calculate_bmi();>> it's referring to the
+    Simply because that's the last step of the process after line 12, <<$('#calculate').click(function () {>> which basically executes
+    it's binding of .click, line 25 executes the order from the user, sending the information, referring back to line 12.
