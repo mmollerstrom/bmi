@@ -12,4 +12,9 @@ describe("BMICalculator", function() {
     expect(person.bmiValue).toEqual(26.01);
   });
 
+  it("calculates BMI for a person using standard method"), function() {
+    calculator.standard_bmi(person);
+    expect(person.bmiValue).toEqual(26.01);
+  }
+
 });
