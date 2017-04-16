@@ -10,12 +10,18 @@
     <script type="text/javascript">
     $(document).ready(function () {
       $('#calculate').click(function () {
+        var conversion
         var w =parseFloat($('#weight').val());
         var h =parseFloat($('#height').val());
         var person = new Person({weight: w, height: h});
-        person.calculate_bmi();
+         if ($("input[name='conversion']:checked").val() == 'metric') {
+          person.calculate_bmi("metric_bmi");
+        }
+        else {
+          person.calculate_bmi("standard_bmi");        
+        }
         $('#display_value').html('your BMI is ' + person.bmiValue);
-        $('display_message').html('and you are '+ person.bmiMessage);
+        $('#display_message').html('and you are '+ person.bmiMessage);
       });
     });
     </script>
@@ -24,17 +30,19 @@
 
   <body>
     <form>
-      Metric or BMI? <br>
       <input type="text" id="weight" placeholder="weight">
       <input type="text" id="height" placeholder="height">
       <input type="button" id="calculate" value="calculate">
-      <input type="radio" id=conversion value="1"/>
-      <input type="radio" id=conversion value="2"/>
-    </form>
+  What conversion do you prefer?<br>
+  <input type="radio" name="conversion" id="metric" value="metric">Metric<br>
+  <input type="radio" name="conversion" id="standard" value="stadard">Standard
+</form>
+
     <div>
       <span id="display_value"></span>
       <span id="display_message"></span>
     </div>
+
 
   </body>
 </html>
