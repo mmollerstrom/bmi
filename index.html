@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>BMI Calculator</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+
     <script src="src/person.js"></script>
     <script src="src/bmi_calculator.js"></script>
     <script src='https://code.jquery.com/jquery-2.1.4.js'></script>
@@ -29,13 +34,14 @@
   </head>
 
   <body>
+    <h1>What conversion do you prefer?</h1><br>
     <form>
       <input type="text" id="weight" placeholder="weight in kg / lbs">
       <input type="text" id="height" placeholder="height in cm / inch">
-      <input type="button" id="calculate" value="calculate">
-  What conversion do you prefer?<br>
-  <input type="radio" name="conversion" id="metric" value="metric">Metric<br>
-  <input type="radio" name="conversion" id="standard" value="stadard">Standard
+
+  <input type="radio" name="conversion" id="metric" value="metric"> Metric<br>
+  <input type="radio" name="conversion" id="standard" value="stadard"> Standard<br>
+        <input type="button" id="calculate" value="calculate"> <br>
 </form>
 
     <div>
@@ -43,6 +49,8 @@
       <span id="display_message"></span>
     </div>
 
-
+    <script src="js/jquery.min.js"></script>
+    <!-- this will include every plugin and utility required by Foundation -->
+    <script src="js/foundation.min.js"></script>
   </body>
 </html>
