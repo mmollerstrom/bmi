@@ -18,16 +18,19 @@ describe("Person", function() {
     expect(person.bmiValue).toEqual(1.83);
   });
 
+  it("should have BMI Message", function() {
+    person.calculate_bmi("standard_bmi");
+    expect(person.bmiMessage).toEqual("Underweight");
+  });
+
   it("Should calculate BMI value in metric", function() {
     person.calculate_bmi("metric_bmi");
     expect(person.bmiValue).toEqual(26.01);
   });
 
-
   it("should have BMI Message", function() {
-    person.calculate_bmi();
+    person.calculate_bmi("metric_bmi");
     expect(person.bmiMessage).toEqual("Overweight");
   });
 
-  })
 });
