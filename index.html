@@ -18,7 +18,7 @@
           person.calculate_bmi("metric_bmi");
         }
         else {
-          person.calculate_bmi("standard_bmi");        
+          person.calculate_bmi("standard_bmi");
         }
         $('#display_value').html('your BMI is ' + person.bmiValue);
         $('#display_message').html('and you are '+ person.bmiMessage);
@@ -30,8 +30,8 @@
 
   <body>
     <form>
-      <input type="text" id="weight" placeholder="weight">
-      <input type="text" id="height" placeholder="height">
+      <input type="text" id="weight" placeholder="weight in kg / lbs">
+      <input type="text" id="height" placeholder="height in cm / inch">
       <input type="button" id="calculate" value="calculate">
   What conversion do you prefer?<br>
   <input type="radio" name="conversion" id="metric" value="metric">Metric<br>
