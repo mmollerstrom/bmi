@@ -35,23 +35,21 @@
   </head>
 
   <body>
-    <center>  <form>
-    <h2>CALCULATE YOUR BMI</h2>
-<!-- Text boxes -->
-      <input type="text" class="row" id="weight" placeholder="weight in kg / lbs">
-      <input type="text" style="width: 180px" id="height" placeholder="height in cm / inch">
-<!-- Radio buttons -->
-  <input type="radio" name="conversion" id="metric" value="metric"> Metric
-  <input type="radio" name="conversion" id="standard" value="standard"> Standard<br>
-  <!-- button -->
-  <input type="button" id="calculate" value="calculate"></br>
-</form>
+  <h2>CALCULATE YOUR BMI</h2>
+  <form style="border: 1px solid #666">
+      <!-- Text boxes -->
+      <input type="text" class="row centertext centerboxhack" id="weight" placeholder="weight in kg / lbs">
+      <input type="text" class="row" id="height" placeholder="height in cm / inch">
+      <!-- Radio buttons -->
+      <input type="radio" name="conversion" id="metric" value="metric"> Metric
+      <input type="radio" name="conversion" id="standard" value="standard"> Standard<br>
+      <!-- button -->
+      <input type="button" id="calculate" value="calculate"></br>
+  </form>
 
-      <span id="display_value"></span>
-      <span id="display_message"></span>
-
-</center>
-    <!-- this will include every plugin and utility required by Foundation -->
-        <script src="js/vendor/foundation.min.js"></script>
-    <script src="js/jquery.js"></script>
+  <span id="display_value"></span>
+  <span id="display_message"></span>
+  <!-- this will include every plugin and utility required by Foundation -->
+  <script src="js/vendor/foundation.min.js"></script>
+  <!--<script src="js/jquery.js"></script>-->
 </html>
